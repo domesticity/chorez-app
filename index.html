@@ -23,10 +23,18 @@
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
   <div class="container-fluid">
     <div style="display:flex"> 
-      <span class="navbar-brand">Chores</span> 
+
+      <span class="navbar-brand">
+        <table>
+          <tr><th>Chorez</th></tr>
+          <tr><td>(with a z)</td></tr>
+        </table>
+      </span>
+      
       <div id="nav-users"> 
       <!-- one button per user here -->
       </div>
+    
     </div>
     <button id="new-chore-button" class="btn bi bi-plus-square btn-outline-secondary" onclick="open_newchore_modal()"></button>
       <button id="edit-state-button" class="btn bi bi-gear btn-outline-secondary hidden" onclick="edit_state()"></button>

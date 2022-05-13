@@ -78,6 +78,12 @@ body {
   margin-left: 0.5rem;
 }
 
+.navbar-brand td {
+  line-height: 0;
+  font-size: 0.8rem;
+  text-align: right;
+}
+
 @media (min-width: 100px) {
   .modal-dialog {
     max-width: 90%;
