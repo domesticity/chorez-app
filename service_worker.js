@@ -1,6 +1,6 @@
 var GHPATH = '/chorez-app';
 var APP_PREFIX = 'chorez_';
-var VERSION = 'version_001';
+var VERSION = 'version_002';
 var URLS = [    
   `${GHPATH}/`,
   `${GHPATH}/index.html`,
