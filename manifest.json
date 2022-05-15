@@ -1,0 +1,22 @@
+{
+  "name": "Chorez (with a z)",
+  "short_name": "Chorez",
+  "description": "Chores management app",
+  "scope": "/chorez-app/",
+  "start_url": "/chorez-app/",
+  "background_color": "#000000",
+  "theme_color": "#000000",
+  "display": "standalone", 
+  "icons": [
+      {
+        "src": "https://user-images.githubusercontent.com/4995097/168456372-f017111a-415d-4df5-ade4-5077a455de53.png",
+        "type": "image/png",
+        "sizes": "128x128"
+      },
+      {
+        "src": "https://user-images.githubusercontent.com/4995097/168456371-f44ba647-600d-48a1-96e6-65a8ed51faf6.png",
+        "type": "image/png",
+        "sizes": "512x512"
+      }
+  ]
+}

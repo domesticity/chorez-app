@@ -2,7 +2,8 @@
 <head>
 <meta name="mobile-web-app-capable" content="yes">
 
-<link rel="icon" sizes="192x192" href="https://user-images.githubusercontent.com/4995097/168215368-dfba9545-734f-4dde-bf8f-3acdc8e0ee74.png">
+<link rel="canonical" href="https://domesticity.github.io/chorez-app/"/>
+<link rel="manifest" href="/chorez-app-pwa/manifest.json">
 
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 <script src="https://code.jquery.com/ui/1.13.0/jquery-ui.min.js"></script>
@@ -422,11 +423,28 @@ function init_navbar(only_users=false){
   })
 }
 
+function init_state(){
+  lambda_call('get_state', {}, false, function(data){
+    response = JSON.parse(data.response)
+    state = response.data
+  })
+}
+
+function init_pwa(){
+  if (navigator.serviceWorker) {
+    navigator.serviceWorker.register (
+      '/chorez-app/service_worker.js',
+      {scope: '/chorez-app/'}
+    )
+  }
+}
+
 // ------------------------------------------------------------------ //
 // document ready
 // ------------------------------------------------------------------ //
 
 function reset(){
+  init_pwa();
   init_state();
   init_navbar();
   init_chore_grid();

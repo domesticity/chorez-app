@@ -113,11 +113,4 @@ function lambda_remind_chore(name){
   lambda_call('remind_chore', {'name':name})
 }
 
-function init_state(){
-  lambda_call('get_state', {}, false, function(data){
-    response = JSON.parse(data.response)
-    state = response.data
-  })
-}
-
 // ------------------------------------------------------------------ //
